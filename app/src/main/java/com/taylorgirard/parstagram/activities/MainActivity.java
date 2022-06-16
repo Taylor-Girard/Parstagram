@@ -1,4 +1,4 @@
-package com.taylorgirard.parstagram;
+package com.taylorgirard.parstagram.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +30,7 @@ import com.parse.ParseFile;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.taylorgirard.parstagram.R;
 import com.taylorgirard.parstagram.fragments.ComposeFragment;
 import com.taylorgirard.parstagram.fragments.PostsFragment;
 import com.taylorgirard.parstagram.fragments.ProfileFragment;
@@ -48,21 +49,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //btnFeed = findViewById(R.id.btnFeed);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-
-//        btnFeed.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(MainActivity.this, FeedActivity.class);
-//                startActivity(i);
-//            }
-//        });
-
-        //queryPosts();
-
-
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener(){
 
             @Override

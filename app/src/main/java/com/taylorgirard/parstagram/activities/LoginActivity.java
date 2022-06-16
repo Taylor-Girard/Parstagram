@@ -1,4 +1,4 @@
-package com.taylorgirard.parstagram;
+package com.taylorgirard.parstagram.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.taylorgirard.parstagram.R;
 
 public class LoginActivity extends AppCompatActivity {
 

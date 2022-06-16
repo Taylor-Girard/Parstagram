@@ -1,4 +1,4 @@
-package com.taylorgirard.parstagram;
+package com.taylorgirard.parstagram.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

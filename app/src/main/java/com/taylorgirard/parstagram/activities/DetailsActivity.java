@@ -1,4 +1,4 @@
-package com.taylorgirard.parstagram;
+package com.taylorgirard.parstagram.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
+import com.taylorgirard.parstagram.Post;
+import com.taylorgirard.parstagram.R;
 
 import org.parceler.Parcels;
 
