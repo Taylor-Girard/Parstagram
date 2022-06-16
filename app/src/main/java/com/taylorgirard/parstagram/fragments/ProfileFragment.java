@@ -1,6 +1,14 @@
 package com.taylorgirard.parstagram.fragments;
 
+import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -11,6 +19,8 @@ import com.taylorgirard.parstagram.Post;
 import java.util.List;
 
 public class ProfileFragment extends PostsFragment{
+
+    private RecyclerView rvPosts;
 
     @Override
     protected void queryPosts() {
@@ -35,5 +45,11 @@ public class ProfileFragment extends PostsFragment{
                 adapter.notifyDataSetChanged();
             }
         });
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        super.rvPosts.setLayoutManager(new GridLayoutManager(getContext(), 2));
     }
 }
