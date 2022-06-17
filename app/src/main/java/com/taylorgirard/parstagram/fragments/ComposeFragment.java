@@ -32,6 +32,7 @@ import com.parse.SaveCallback;
 import com.taylorgirard.parstagram.activities.LoginActivity;
 import com.taylorgirard.parstagram.Post;
 import com.taylorgirard.parstagram.R;
+import com.taylorgirard.parstagram.activities.ProfilePicActivity;
 
 import java.io.File;
 import java.util.List;
@@ -47,6 +48,7 @@ public class ComposeFragment extends Fragment {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
+    private Button btnEditProfile;
     private File photoFile;
     public String photoFileName = "photo.jpg";
 
@@ -69,15 +71,25 @@ public class ComposeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         etDescription = view.findViewById(R.id.etDescription);
-        btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
-        ivPostImage = view.findViewById(R.id.ivPostImage);
-        btnSubmit = view.findViewById(R.id.btnSubmit);
+        btnCaptureImage = view.findViewById(R.id.btnCaptureProfile);
+        ivPostImage = view.findViewById(R.id.ivProfileImage);
+        btnSubmit = view.findViewById(R.id.btnSubmitProfile);
         btnLogout = view.findViewById(R.id.btnLogout);
+        btnEditProfile = view.findViewById(R.id.btnEditProfile);
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchCamera();
+            }
+        });
+
+        btnEditProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser currentUser = ParseUser.getCurrentUser();
+                Intent i = new Intent(getContext(), ProfilePicActivity.class);
+                startActivity(i);
             }
         });
 

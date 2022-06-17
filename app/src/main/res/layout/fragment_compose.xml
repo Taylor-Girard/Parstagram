@@ -18,7 +18,7 @@
     </EditText>
 
     <Button
-        android:id="@+id/btnCaptureImage"
+        android:id="@+id/btnCaptureProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Take Picture"
@@ -27,22 +27,22 @@
         app:layout_constraintTop_toBottomOf="@+id/etDescription" />
 
     <ImageView
-        android:id="@+id/ivPostImage"
+        android:id="@+id/ivProfileImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCaptureImage"
+        app:layout_constraintTop_toBottomOf="@+id/btnCaptureProfile"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnSubmitProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPostImage" />
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileImage" />
 
     <Button
         android:id="@+id/btnLogout"
@@ -54,6 +54,16 @@
         android:text="Logout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Edit Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

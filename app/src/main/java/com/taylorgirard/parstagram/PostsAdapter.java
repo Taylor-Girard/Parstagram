@@ -2,6 +2,7 @@ package com.taylorgirard.parstagram;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private ImageView ivImage;
         private TextView tvDescription;
         private TextView tvTimePosted;
+        private ImageView ivProfile;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -69,6 +71,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             ivImage = itemView.findViewById(R.id.ivImage);
             tvDescription = itemView.findViewById(R.id.tvDescription);
             tvTimePosted = itemView.findViewById(R.id.tvTimePosted);
+            ivProfile = itemView.findViewById(R.id.ivProfile);
             itemView.setOnClickListener(this);
         }
 
@@ -83,6 +86,10 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             ParseFile image = post.getImage();
             if (image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivImage);
+            }
+            ParseFile profile = post.getUser().getParseFile("profilePic");
+            if (image != null) {
+                Glide.with(context).load(profile.getUrl()).into(ivProfile);
             }
         }
 
