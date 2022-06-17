@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.parse.ParseFile;
-import com.taylorgirard.parstagram.Post;
+import com.taylorgirard.parstagram.models.Post;
 import com.taylorgirard.parstagram.R;
 
 import org.parceler.Parcels;

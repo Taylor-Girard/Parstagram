@@ -1,4 +1,4 @@
-package com.taylorgirard.parstagram;
+package com.taylorgirard.parstagram.models;
 
 import android.util.Log;
 

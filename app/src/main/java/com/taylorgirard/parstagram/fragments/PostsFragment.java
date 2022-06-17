@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
-import com.taylorgirard.parstagram.Post;
+import com.taylorgirard.parstagram.models.Post;
 import com.taylorgirard.parstagram.PostsAdapter;
 import com.taylorgirard.parstagram.R;
 

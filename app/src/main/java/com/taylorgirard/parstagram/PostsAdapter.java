@@ -2,7 +2,6 @@ package com.taylorgirard.parstagram;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.parse.ParseFile;
 import com.taylorgirard.parstagram.activities.DetailsActivity;
+import com.taylorgirard.parstagram.models.Post;
 
 import org.parceler.Parcels;
 
