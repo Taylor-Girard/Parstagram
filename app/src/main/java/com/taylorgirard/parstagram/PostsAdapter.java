@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.parse.ParseFile;
 import com.taylorgirard.parstagram.activities.DetailsActivity;
 
@@ -89,7 +90,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             }
             ParseFile profile = post.getUser().getParseFile("profilePic");
             if (image != null) {
-                Glide.with(context).load(profile.getUrl()).into(ivProfile);
+                Glide.with(context).load(profile.getUrl()).transform(new CircleCrop()).into(ivProfile);
             }
         }
 

@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.parse.ParseFile;
 import com.taylorgirard.parstagram.Post;
 import com.taylorgirard.parstagram.R;
@@ -21,6 +22,7 @@ public class DetailsActivity extends AppCompatActivity {
     private ImageView ivImage;
     private TextView tvDescription;
     private TextView tvTimePosted;
+    private ImageView ivProfile;
     private Post post;
 
     @Override
@@ -32,6 +34,7 @@ public class DetailsActivity extends AppCompatActivity {
         ivImage = findViewById(R.id.ivImage);
         tvDescription = findViewById(R.id.tvDescription);
         tvTimePosted = findViewById(R.id.tvTimePosted);
+        ivProfile = findViewById(R.id.ivProfile);
 
         post = (Post) Parcels.unwrap(getIntent().getParcelableExtra(Post.class.getSimpleName()));
 
@@ -41,8 +44,12 @@ public class DetailsActivity extends AppCompatActivity {
         String timeAgo = Post.calculateTimeAgo(createdAt);
         tvTimePosted.setText(timeAgo);
         ParseFile image = post.getImage();
+        ParseFile profile = post.getUser().getParseFile("profilePic");
         if (image != null) {
             Glide.with(this).load(image.getUrl()).into(ivImage);
+        }
+        if (image != null) {
+            Glide.with(this).load(profile.getUrl()).transform(new CircleCrop()).into(ivProfile);
         }
     }
 }

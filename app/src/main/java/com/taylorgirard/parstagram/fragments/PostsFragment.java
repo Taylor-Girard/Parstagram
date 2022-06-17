@@ -26,8 +26,9 @@ import java.util.List;
 
 public class PostsFragment extends Fragment {
 
-    protected RecyclerView rvPosts;
     public static final String TAG = "PostsFragment";
+
+    protected RecyclerView rvPosts;
     protected PostsAdapter adapter;
     protected List<Post> allPosts;
     private SwipeRefreshLayout swipeContainer;
