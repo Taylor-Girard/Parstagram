@@ -46,6 +46,10 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+    }
+
     private void loginUser(String username, String password){
         Log.i(TAG, "Attempting to login user " + username);
 
